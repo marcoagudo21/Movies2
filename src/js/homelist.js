@@ -54,7 +54,9 @@ form.addEventListener("submit", (e) => {
   console.log(dataForm);
   e.target[0].value = "";
   const peliIndividual = async () => {
+    spinnerLoader()
     cambioSeccionSearch(hero_container, nav, hero, hero2, list);
+    hero2.innerHTML = '';
     const { results } = await obtenerPeliIndividual(dataForm.join(""));
     results.forEach(({ poster_path, id }) => {
       if (poster_path != null) {
@@ -339,6 +341,7 @@ aMovies.addEventListener('click', (e)=> {
   spinnerLoader()
   const pelisUM = async () => {
     cambioSeccionSearch(hero_container, nav, hero, hero2, list);
+    hero2.innerHTML = '';
     const {data, data2} = await obtenerMovies();
     
     data.results.forEach(({ poster_path, id }) => {
@@ -424,6 +427,7 @@ btntps.addEventListener("click", () => {
   pelisPopus();
 });
 home.addEventListener("click", () => {
+  spinnerLoader()
   aMovies.disabled = false;
   hero2.innerHTML = "";
   cambioSeccionHome(hero_container, nav, hero, hero2, list);
