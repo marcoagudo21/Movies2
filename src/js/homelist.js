@@ -171,8 +171,9 @@ const eventos = () => {
           "movie__selected__none"
         )
       );
-    const boton = document.querySelector(".btn__trailer");
-    boton.href = `https://www.youtube.com/watch?v=ZclBluzAZVE}`;
+    const boton = document.querySelectorAll(".btn__trailer");
+    boton.forEach(btn => btn.href = `https://www.youtube.com/watch?v=ZclBluzAZVE}`);
+    
     
   });
   const crearHtmlInfo = (
