@@ -61,7 +61,7 @@ form.addEventListener("submit", (e) => {
     results.forEach(({ poster_path, id }) => {
       if (poster_path != null) {
         const html = `
-                <img src="https://image.tmdb.org/t/p/original/${poster_path}" id="${id}"
+                <img src="https://image.tmdb.org/t/p/w300/${poster_path}" id="${id}"
                 alt="">`;
         const divUM = document.createElement("div");
         divUM.classList.add("swiper-slide", "hero2__img", "imgEvent");
@@ -82,7 +82,7 @@ const agregarUltimasPeliculas = async () => {
   const { results } = await obtenerUltimasPeliculas();
   results.forEach(({ poster_path, id }) => {
     const html = `
-        <img src="https://image.tmdb.org/t/p/original/${poster_path}" id="${id}"
+        <img src="https://image.tmdb.org/t/p/w300/${poster_path}" id="${id}"
         alt="">`;
     const divPeli = document.createElement("div");
     divPeli.classList.add("swiper-slide", "swiper-slide-active", "imgEvent");
@@ -94,7 +94,7 @@ const agregarTopPeliculas = async () => {
   const { results } = await obtenerTopPeliculas();
   results.forEach(({ poster_path, id }) => {
     const html = `
-        <img src="https://image.tmdb.org/t/p/original/${poster_path}" id="${id}"
+        <img src="https://image.tmdb.org/t/p/w300/${poster_path}" id="${id}"
         alt="">`;
     const divPeli = document.createElement("div");
     divPeli.classList.add("swiper-slide", "swiper-slide-active", "imgEvent");
@@ -107,7 +107,7 @@ const agregarSeriesPopulares = async () => {
   const { results } = await obtenerPeliculasPopulares();
   results.forEach(({ poster_path, id }) => {
     const html = `
-        <img src="https://image.tmdb.org/t/p/original/${poster_path}" id="${id}"
+        <img src="https://image.tmdb.org/t/p/w300/${poster_path}" id="${id}"
         alt="">`;
         const divPeli = document.createElement("div");
         divPeli.classList.add("swiper-slide", "swiper-slide-active", "imgEvent");
@@ -145,15 +145,15 @@ const eventos = () => {
     <a href="" class="btn__trailer btn__trailer2" target="_blank" >View Trailer</a>
     </div>
     <div class="grid__container__img">
-    <img src="https://image.tmdb.org/t/p/original/AsTlA7dj2ySGY1pzGSD0MoHFhEF.jpg" alt="" width="50%" height="75%">
+    <img src="https://image.tmdb.org/t/p/w300/AsTlA7dj2ySGY1pzGSD0MoHFhEF.jpg" alt="" width="50%" height="75%">
     <i class="fa-regular fa-circle-xmark" style="color: #ff0000;"></i>
     <a href="" class="btn__trailer" >View Trailer</a>
     </div>
     <div class="grid__container__moviecast">
-    <div class="cast2"><img src="https://image.tmdb.org/t/p/original/rQNdJdZewk7VGP16ZNbpfJ9ZeMd.jpg" alt=""><p>Daiki Yamashita</p></div>
-    <div class="cast2"><img src="https://image.tmdb.org/t/p/original/qyZpSYva9O9JQIZ0nVmXTf90FlL.jpg" alt=""><p>Nobuhiko Okamoto</p></div>
-    <div class="cast2"><img src="https://image.tmdb.org/t/p/original/8wKdPV11IwowfwoqGqMMNt9hmp6.jpg" alt=""><p>Yuki Kaji</p></div>
-    <div class="cast2"><img src="https://image.tmdb.org/t/p/original/qnJ2BL0l4c6tsRtkM0CENNAm6L.jpg" alt=""><p>Ryo Yoshizawa</p></div>
+    <div class="cast2"><img src="https://image.tmdb.org/t/p/w300/rQNdJdZewk7VGP16ZNbpfJ9ZeMd.jpg" alt=""><p>Daiki Yamashita</p></div>
+    <div class="cast2"><img src="https://image.tmdb.org/t/p/w300/qyZpSYva9O9JQIZ0nVmXTf90FlL.jpg" alt=""><p>Nobuhiko Okamoto</p></div>
+    <div class="cast2"><img src="https://image.tmdb.org/t/p/w300/8wKdPV11IwowfwoqGqMMNt9hmp6.jpg" alt=""><p>Yuki Kaji</p></div>
+    <div class="cast2"><img src="https://image.tmdb.org/t/p/w300/qnJ2BL0l4c6tsRtkM0CENNAm6L.jpg" alt=""><p>Ryo Yoshizawa</p></div>
     
     
     </div>
@@ -199,7 +199,7 @@ const eventos = () => {
             <a href="" class="btn__trailer btn__trailer2" target="_blank" >View Trailer</a>
             </div>
             <div class="grid__container__img">
-            <img src="https://image.tmdb.org/t/p/original/${poster_path}" alt="" width="50%" height="75%">
+            <img src="https://image.tmdb.org/t/p/w500/${poster_path}" alt="" width="50%" height="75%">
             <i class="fa-regular fa-circle-xmark fa-regular2" style="color: #ff0000;"></i>
             <a href="" class="btn__trailer" target="_blank" >View Trailer</a>
             </div>
@@ -208,7 +208,7 @@ const eventos = () => {
                 ${cast
                   .map(
                     (pj) =>
-                      `<div class="cast2"><img src="https://image.tmdb.org/t/p/original/${pj[1]}" alt=""><p>${pj[0]}</p></div>`
+                      `<div class="cast2"><img src="https://image.tmdb.org/t/p/w200/${pj[1]}" alt=""><p>${pj[0]}</p></div>`
                   )
                   .join("")}
         
@@ -347,7 +347,7 @@ aMovies.addEventListener('click', (e)=> {
     
     data.results.forEach(({ poster_path, id }) => {
       const html = `
-              <img src="https://image.tmdb.org/t/p/original/${poster_path}" id="${id}"
+              <img src="https://image.tmdb.org/t/p/w300/${poster_path}" id="${id}"
               alt="">`;
       const divUM = document.createElement("div");
       divUM.classList.add("swiper-slide", "hero2__img", "imgEvent");
@@ -357,7 +357,7 @@ aMovies.addEventListener('click', (e)=> {
     });
     data2.results.forEach(({ poster_path, id }) => {
       const html = `
-              <img src="https://image.tmdb.org/t/p/original/${poster_path}" id="${id}"
+              <img src="https://image.tmdb.org/t/p/w300/${poster_path}" id="${id}"
               alt="">`;
       const divUM = document.createElement("div");
       divUM.classList.add("swiper-slide", "hero2__img", "imgEvent");
@@ -377,7 +377,7 @@ btnum.addEventListener("click", () => {
     const { results } = await obtenerUM();
     results.forEach(({ poster_path, id }) => {
       const html = `
-              <img src="https://image.tmdb.org/t/p/original/${poster_path}" id="${id}"
+              <img src="https://image.tmdb.org/t/p/w300/${poster_path}" id="${id}"
               alt="">`;
       const divUM = document.createElement("div");
       divUM.classList.add("swiper-slide", "hero2__img", "imgEvent");
@@ -396,7 +396,7 @@ btntrm.addEventListener("click", () => {
     const { results } = await obtenerTRM();
     results.forEach(({ poster_path, id }) => {
       const html = `
-              <img src="https://image.tmdb.org/t/p/original/${poster_path}" id="${id}"
+              <img src="https://image.tmdb.org/t/p/w300/${poster_path}" id="${id}"
               alt="">`;
       const divUM = document.createElement("div");
       divUM.classList.add("swiper-slide", "hero2__img", "imgEvent");
@@ -415,7 +415,7 @@ btntps.addEventListener("click", () => {
     const { results } = await obtenerPP();
     results.forEach(({ poster_path, id }) => {
       const html = `
-              <img src="https://image.tmdb.org/t/p/original/${poster_path}" id="${id}"
+              <img src="https://image.tmdb.org/t/p/w300/${poster_path}" id="${id}"
               alt="">`;
       const divUM = document.createElement("div");
       divUM.classList.add("swiper-slide", "hero2__img", "imgEvent");
